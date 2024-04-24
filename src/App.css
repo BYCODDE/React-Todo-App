@@ -138,11 +138,11 @@ a {
 }
 
 .dark {
-  background: #171823; /* Example dark background color */
-  color: #c8cbe7; /* Example text color for dark mode */
+  background: #171823 !important; 
+  color: #c8cbe7 !important; 
 }
 
 .light {
-  background: #fafafa;
-  color: #494c6b;
+  background: #f3f3f5 !important;
+  color: #494c6b !important;
 }

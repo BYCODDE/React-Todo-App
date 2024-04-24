@@ -12,7 +12,11 @@ export default {
     extend: {
       colors: {
         customColor: '#25273D',
-        customColor2: 'rgba(118, 121, 146, 1)'
+        customColor2: 'rgba(118, 121, 146, 1)',
+        customColor3: '#494C6B',
+        customColor4: '#9495A5',
+        background: '#FFF',
+        background2:'#F3F3F5'
       },
       fontFamily: {
         sans: ["CustomFont", "sans-serif"],
