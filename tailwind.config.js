@@ -4,19 +4,17 @@ export default {
   theme: {
     screens: {
       "2xl": { max: "1535px" },
-
       xl: { max: "1279px" },
-
       lg: { max: "1023px" },
-
       md: { max: "768px" },
-
       sm: { max: "639px" },
     },
-
     extend: {
       fontFamily: {
         sans: ["CustomFont", "sans-serif"],
+      },
+      boxShadow: {
+        custom: "0 0 0 2px rgba(227, 228, 241, 0.6)",
       },
     },
   },
