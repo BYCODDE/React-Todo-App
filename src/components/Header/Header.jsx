@@ -4,7 +4,7 @@ import headerSvg2 from "/images/icon-moon.svg";
 export default function Header() {
   return (
     <header
-      className="p-[40px] bg-cover bg-center bg-no-repeat w-full "
+      className="  p-[40px] bg-cover bg-center bg-no-repeat w-full "
       style={{ backgroundImage: "url('/images/bg-mobile-light.jpg')" }}
     >
       <div className=" flex justify-between items-center">
