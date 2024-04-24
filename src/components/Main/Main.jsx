@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 export default function Main({ dark }) {
+  /// TODO: margin-top: -15%;
   return (
     <main className="p-[40px] text-[12px] text-customColor3 font-normal">
       {dark ? (

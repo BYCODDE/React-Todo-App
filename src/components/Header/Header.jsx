@@ -61,6 +61,7 @@ export default function Header({ toggleDarkMode, dark }) {
       <div className="cursor-pointer mt-[40px] justify-start  rounded-lg bg-customColor  shadow-lg flex items-center gap-[20px] p-[20px]">
         <div className="ml-[20px] shadow-customColor2 h-[25px] w-[30px] rounded-[50%] bg-customColor "></div>
         <input
+        
           type="text"
           className=" outline-none   w-[100%]  bg-customColor text-customColor2  text-[15px] font-normal leading-normal tracking-tighter"
           placeholder="Create a new todo…"
