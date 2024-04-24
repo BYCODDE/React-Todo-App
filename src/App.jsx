@@ -14,7 +14,6 @@ function App() {
       document.body.classList.remove("dark");
       document.body.classList.add("light");
     }
-    console.log(dark);
   };
 
   return (
