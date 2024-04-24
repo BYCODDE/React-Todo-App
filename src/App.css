@@ -137,6 +137,10 @@ a {
   box-sizing: border-box;
 }
 
+body{
+  background: #f3f3f5 ;
+
+}
 .dark {
   background: #171823 !important;
   color: #c8cbe7 !important;
