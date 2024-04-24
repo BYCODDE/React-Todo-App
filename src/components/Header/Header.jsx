@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import headerSvg from "/images/TODO 2.svg";
 import moon from "/images/icon-moon.svg";
 import sun from "/images/icon-sun.svg";
-export default function Header({ onDark,dark }) {
+export default function Header({ toggleDarkMode, dark }) {
   return (
     <header
       className="  p-[40px] bg-cover bg-center bg-no-repeat w-full "
@@ -11,14 +12,14 @@ export default function Header({ onDark,dark }) {
         <img className="h-[25px]" src={headerSvg} alt="headerSvg" />
         {dark ? (
           <img
-            onClick={onDark}
+            onClick={toggleDarkMode}
             className="h-[30px] cursor-pointer"
             src={moon}
             alt="moon"
           />
         ) : (
           <img
-            onClick={onDark}
+            onClick={toggleDarkMode}
             className="h-[30px] cursor-pointer"
             src={sun}
             alt="sun"

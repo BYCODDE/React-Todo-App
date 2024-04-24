@@ -136,3 +136,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.dark {
+  background: #171823; /* Example dark background color */
+  color: #c8cbe7; /* Example text color for dark mode */
+}
+
+.light {
+  background: #fafafa;
+  color: #494c6b;
+}
