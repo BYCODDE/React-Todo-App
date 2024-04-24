@@ -30,7 +30,7 @@ export default function Header({ toggleDarkMode, dark }) {
         <div className="ml-[20px] shadow-custom  h-[25px] w-[30px] rounded-[50%] bg-white"></div>
         <input
           type="text"
-          className=" w-[100%]   text-gray-600  text-[15px] font-normal leading-normal tracking-tighter"
+          className="outline-none   w-[100%]   text-gray-600  text-[15px] font-normal leading-normal tracking-tighter"
           placeholder="Create a new todo…"
         />
       </div>
@@ -47,7 +47,7 @@ export default function Header({ toggleDarkMode, dark }) {
             onClick={toggleDarkMode}
             className="h-[30px] cursor-pointer"
             src={moon}
-            alt="moon"  
+            alt="moon"
           />
         ) : (
           <img
@@ -62,7 +62,7 @@ export default function Header({ toggleDarkMode, dark }) {
         <div className="ml-[20px] shadow-customColor2 h-[25px] w-[30px] rounded-[50%] bg-customColor "></div>
         <input
           type="text"
-          className=" w-[100%]  bg-customColor text-customColor2  text-[15px] font-normal leading-normal tracking-tighter"
+          className=" outline-none   w-[100%]  bg-customColor text-customColor2  text-[15px] font-normal leading-normal tracking-tighter"
           placeholder="Create a new todo…"
         />
       </div>

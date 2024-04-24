@@ -138,11 +138,14 @@ a {
 }
 
 .dark {
-  background: #171823  !important; 
-  color: #c8cbe7 !important; 
+  background: #171823 !important;
+  color: #c8cbe7 !important;
 }
 
 .light {
   background: #f3f3f5 !important;
   color: #494c6b !important;
+}
+.main_input {
+  outline: none;
 }
