@@ -17,9 +17,9 @@ function App() {
   };
 
   return (
-    <div className={dark ? "dark" : "light"}>
+    <div className={dark ? "light" : "dark"}>
       <Header dark={dark} toggleDarkMode={toggleDarkMode}></Header>
-      <Main ></Main>
+      <Main dark={dark} ></Main>
     </div>
   );
 }
