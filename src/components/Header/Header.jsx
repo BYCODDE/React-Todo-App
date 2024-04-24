@@ -9,10 +9,14 @@ export default function Header() {
     >
       <div className=" flex justify-between items-center">
         <img className="h-[25px]" src={headerSvg} alt="headerSvg" />
-        <img className="h-[30px]" src={headerSvg2} alt="headerSvg" />
+        <img
+          className="h-[30px] cursor-pointer"
+          src={headerSvg2}
+          alt="headerSvg"
+        />
       </div>
       <div className="cursor-pointer mt-[40px] justify-start  rounded-lg bg-white shadow-md flex items-center gap-[20px] p-[20px]">
-        <div className="shadow-custom  h-[20px] w-[20px] rounded-[50%] bg-white"></div>
+        <div className="ml-[20px] shadow-custom  h-[25px] w-[25px] rounded-[50%] bg-white"></div>
         <input
           type="text"
           className=" w-[100%]   text-gray-600  text-[20px] font-normal leading-normal tracking-tighter"
