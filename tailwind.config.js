@@ -19,6 +19,7 @@ export default {
         customColor2: "rgba(118, 121, 146, 1)",
         customColor3: "#494C6B",
         customColor4: "#9495A5",
+        customColor5: '#3A7CFD',
         background: "#FFF",
         background2: "#F3F3F5",
       },

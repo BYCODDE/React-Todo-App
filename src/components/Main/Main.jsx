@@ -14,6 +14,14 @@ export default function Main({ dark }) {
           <h3>Clear Completed</h3>
         </div>
       )}
+
+      <div className="mt-[16px] font-bold text-[14px] bg-background rounded-md shadow-lg tracking-tighter  text-customColor4   leading-normal flex justify-center p-[20px] gap-[19px]">
+        <span className="hover:text-customColor5 cursor-pointer">All</span>
+        <span className="hover:text-customColor5 cursor-pointer">Active</span>
+        <span className="hover:text-customColor5 cursor-pointer">
+          Completed
+        </span>
+      </div>
     </main>
   );
 }
