@@ -5,7 +5,7 @@ export default function Main({ dark, posts }) {
   return (
     <main className="p-[40px] text-[12px] text-customColor3 font-normal">
       {posts.map((post) => (
-        <Todo key={post.id} post={post} />
+        <Todo dark={dark} key={post.id} post={post} />
       ))}
       {dark ? (
         <div className="bg-background rounded-md shadow-lg tracking-tighter text-customColor4 font-normal leading-normal flex justify-between p-[20px]">
