@@ -20,6 +20,7 @@ export default {
         customColor3: "#494C6B",
         customColor4: "#9495A5",
         customColor5: '#3A7CFD',
+        customColor6: '#393A4B',
         background: "#FFF",
         background2: "#F3F3F5",
         background3: "#E3E4F1",

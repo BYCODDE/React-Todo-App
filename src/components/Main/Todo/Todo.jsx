@@ -2,11 +2,10 @@
 
 import X from "/images/X.svg";
 const Todo = ({ post, dark }) => {
-
   return (
     <>
       {dark ? (
-        <div className=" border-b-4 border-red-700  bg-background rounded-md shadow-lg tracking-tighter text-customColor4 font-normal leading-normal flex justify-between p-[20px]">
+        <div className=" border-b border-background3 border-solid bg-background  shadow-lg tracking-tighter text-customColor4 font-normal leading-normal flex justify-between p-[20px]">
           <div className=" shadow-custom  h-[20px] w-[20px] rounded-[50%] bg-white cursor-pointer"></div>
           <p className="text-customColor3 text-[14px] font-normal leading-normal tracking-tighter">
             {post.content}
@@ -18,7 +17,7 @@ const Todo = ({ post, dark }) => {
           />
         </div>
       ) : (
-        <div className=" border-b-4 border-red-700  bg-customColor rounded-md shadow-lg text-customColor2 text-[12px] font-normal leading-normal tracking-tighter flex justify-between p-[20px]">
+        <div className=" border-b border-customColor6 border-solid bg-customColor  shadow-lg text-customColor2 text-[12px] font-normal leading-normal tracking-tighter flex justify-between p-[20px]">
           <div className="ml-[20px] shadow-customColor2 h-[20px] w-[20px] rounded-[50%] bg-customColor "></div>
           <p className="text-customColor3 text-[14px] font-normal leading-normal tracking-tighter">
             {post.content}
