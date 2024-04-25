@@ -7,33 +7,14 @@ function App() {
 
   const [input, setInput] = useState("");
 
-  console.log(input);
-  const [posts, setPosts] = useState([
-    {
-      id: 1,
-      title: "Hello world",
-      content: "fhsodfhosdhf",
-      author: "Beqa",
-    },
-    {
-      id: 2,
-      title: "Hello world",
-      content: "fhsodfhosdhf",
-      author: "Anar",
-    },
-    {
-      id: 3,
-      title: "Hello world",
-      content: "fhsodfhosdhf",
-      author: "Alim",
-    },
-  ]);
+  const [posts, setPosts] = useState([]);
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       event.preventDefault();
-      const title = event.target.value;
-      setPosts([...posts, { title }]);
+      const content = event.target.value;
+      setPosts([...posts, { content }]);
+      event.target.value = "";
     }
   };
 
