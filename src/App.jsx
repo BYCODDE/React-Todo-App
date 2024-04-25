@@ -40,11 +40,7 @@ function App() {
   return (
     <div className={dark ? "light" : "dark"}>
       <Header dark={dark} toggleDarkMode={toggleDarkMode}></Header>
-      <Main posts={posts} dark={dark}>
-        {posts.map((post) => (
-          <Todo key={post.id} post={post} />
-        ))}
-      </Main>
+      <Main posts={posts} dark={dark}></Main>
     </div>
   );
 }
