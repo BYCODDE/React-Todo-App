@@ -5,9 +5,9 @@ import Main from "./components/Main/Main";
 function App() {
   const [dark, setDark] = useState(true);
 
-const [input,setInput] = useState("")
+  const [input, setInput] = useState("");
 
-console.log(input);
+  console.log(input);
   const [posts, setPosts] = useState([
     {
       id: 1,
@@ -28,6 +28,15 @@ console.log(input);
       author: "Alim",
     },
   ]);
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      const title = event.target.value;
+      setPosts([...posts, { title }]);
+    }
+  };
+
   const toggleDarkMode = function () {
     setDark(!dark);
     if (dark) {
@@ -39,10 +48,15 @@ console.log(input);
     }
   };
 
-
   return (
     <div className={dark ? "light" : "dark"}>
-      <Header input={input} setInput={setInput}   dark={dark} toggleDarkMode={toggleDarkMode}></Header>
+      <Header
+        input={input}
+        setInput={setInput}
+        dark={dark}
+        toggleDarkMode={toggleDarkMode}
+        handleKeyPress={handleKeyPress}
+      ></Header>
       <Main posts={posts} dark={dark}></Main>
     </div>
   );
