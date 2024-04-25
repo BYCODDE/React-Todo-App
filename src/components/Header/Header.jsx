@@ -2,7 +2,7 @@
 import headerSvg from "/images/TODO 2.svg";
 import moon from "/images/icon-moon.svg";
 import sun from "/images/icon-sun.svg";
-export default function Header({ toggleDarkMode, dark }) {
+export default function Header({ toggleDarkMode, dark, setInput }) {
   return dark ? (
     <header
       className="  p-[40px] bg-cover bg-center bg-no-repeat w-full "
@@ -29,6 +29,7 @@ export default function Header({ toggleDarkMode, dark }) {
       <div className="cursor-pointer mt-[40px] justify-start  rounded-lg bg-white shadow-md flex items-center gap-[20px] p-[20px]">
         <div className="ml-[20px] shadow-custom  h-[25px] w-[30px] rounded-[50%] bg-white"></div>
         <input
+          onChange={(e) => setInput(e.target.value)}
           type="text"
           className="outline-none   w-[100%]   text-gray-600  text-[15px] font-normal leading-normal tracking-tighter"
           placeholder="Create a new todo…"
@@ -61,7 +62,7 @@ export default function Header({ toggleDarkMode, dark }) {
       <div className="cursor-pointer mt-[40px] justify-start  rounded-lg bg-customColor  shadow-lg flex items-center gap-[20px] p-[20px]">
         <div className="ml-[20px] shadow-customColor2 h-[25px] w-[30px] rounded-[50%] bg-customColor "></div>
         <input
-        
+          onChange={(e) => setInput(e.target.value)}
           type="text"
           className=" outline-none   w-[100%]  bg-customColor text-customColor2  text-[15px] font-normal leading-normal tracking-tighter"
           placeholder="Create a new todo…"

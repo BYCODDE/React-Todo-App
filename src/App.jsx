@@ -2,10 +2,12 @@ import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
-import Todo from "./components/Main/Todo/Todo";
 function App() {
   const [dark, setDark] = useState(true);
 
+const [input,setInput] = useState("")
+
+console.log(input);
   const [posts, setPosts] = useState([
     {
       id: 1,
@@ -37,9 +39,10 @@ function App() {
     }
   };
 
+
   return (
     <div className={dark ? "light" : "dark"}>
-      <Header dark={dark} toggleDarkMode={toggleDarkMode}></Header>
+      <Header input={input} setInput={setInput}   dark={dark} toggleDarkMode={toggleDarkMode}></Header>
       <Main posts={posts} dark={dark}></Main>
     </div>
   );
