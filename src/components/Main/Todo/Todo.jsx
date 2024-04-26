@@ -36,6 +36,7 @@ const Todo = ({ post, dark, posts, setPosts }) => {
             {post.content}
           </p>
           <img
+            onClick={handleDelete}
             className="w-[17px] h-[17px]  cursor-pointer"
             src={X}
             alt="delete_svg"
