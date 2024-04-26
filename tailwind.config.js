@@ -24,6 +24,8 @@ export default {
         background: "#FFF",
         background2: "#F3F3F5",
         background3: "#E3E4F1",
+        background4: "#55DDFF",
+        background5: "#C058F3",
       },
       fontFamily: {
         sans: ["CustomFont", "sans-serif"],

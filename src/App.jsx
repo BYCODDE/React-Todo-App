@@ -7,13 +7,20 @@ function App() {
 
   // const [input, setInput] = useState("");
 
-  const [color, setColor] = useState(true);
+  // const [color, setColor] = useState(true);
+
+  const [completed, setCompleted] = useState(true);
 
   const [posts, setPosts] = useState([]);
 
-  const handleButtonColor = function () {
-    setColor(!color);
+  const handleComplete = function () {
+    setCompleted(!completed);
+    console.log(completed);
   };
+
+  // const handleButtonColor = function () {
+  //   setColor(!color);
+  // };
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter" && event.target.value.trim() !== "") {
@@ -44,7 +51,12 @@ function App() {
         toggleDarkMode={toggleDarkMode}
         handleKeyPress={handleKeyPress}
       ></Header>
-      <Main posts={posts} dark={dark}></Main>
+      <Main
+        completed={completed}
+        handleComplete={handleComplete}
+        posts={posts}
+        dark={dark}
+      ></Main>
     </div>
   );
 }

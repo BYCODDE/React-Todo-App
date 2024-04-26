@@ -1,12 +1,18 @@
 /* eslint-disable react/prop-types */
 import Todo from "./Todo/Todo";
 
-export default function Main({ dark, posts }) {
+export default function Main({ handleComplete, dark, posts,completed }) {
   return (
     <main className="p-[40px] text-[12px] text-customColor3 font-normal">
       <div className="overflow-hidden rounded-md">
         {posts.map((post) => (
-          <Todo dark={dark} key={Math.random() * Math.random()} post={post} />
+          <Todo
+          completed={completed}
+            handleComplete={handleComplete}
+            dark={dark}
+            key={Math.random() * Math.random()}
+            post={post}
+          />
         ))}
 
         {dark ? (
@@ -19,7 +25,9 @@ export default function Main({ dark, posts }) {
         ) : (
           <div className="bg-customColor rounded-md shadow-lg text-customColor2 text-[12px] font-normal leading-normal tracking-tighter flex justify-between p-[20px]">
             <h3>{posts.length} items left</h3>
-            <h3 className="cursor-pointer hover:text-background3">Clear Completed</h3>
+            <h3 className="cursor-pointer hover:text-background3">
+              Clear Completed
+            </h3>
           </div>
         )}
         {dark ? (
