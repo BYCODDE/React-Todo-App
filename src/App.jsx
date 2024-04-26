@@ -10,7 +10,7 @@ function App() {
   const [posts, setPosts] = useState([]);
 
   const handleKeyPress = (event) => {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" && event.target.value.trim() !=="") {
       event.preventDefault();
       const content = event.target.value;
       setPosts([...posts, { content }]);
