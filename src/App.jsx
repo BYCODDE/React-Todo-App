@@ -5,7 +5,7 @@ import Main from "./components/Main/Main";
 function App() {
   const [dark, setDark] = useState(true);
 
-  const [input, setInput] = useState("");
+  // const [input, setInput] = useState("");
 
   const [posts, setPosts] = useState([]);
 
@@ -32,8 +32,8 @@ function App() {
   return (
     <div className={dark ? "light" : "dark"}>
       <Header
-        input={input}
-        setInput={setInput}
+        // input={input}
+        // setInput={setInput}
         dark={dark}
         toggleDarkMode={toggleDarkMode}
         handleKeyPress={handleKeyPress}

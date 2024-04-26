@@ -6,7 +6,7 @@ export default function Main({ dark, posts }) {
     <main className="p-[40px] text-[12px] text-customColor3 font-normal">
       <div className="overflow-hidden rounded-md">
         {posts.map((post) => (
-          <Todo dark={dark} key={post.id} post={post} />
+          <Todo dark={dark} key={Math.random() * Math.random()} post={post} />
         ))}
 
         {dark ? (
