@@ -11,8 +11,6 @@ function App() {
     if (event.key === "Enter" && event.target.value.trim() !== "") {
       event.preventDefault();
       const content = event.target.value;
-      const id = posts.length;
-      console.log(id);
       setPosts([...posts, { content, id: Math.random() }]);
       event.target.value = "";
     }
@@ -36,7 +34,7 @@ function App() {
         toggleDarkMode={toggleDarkMode}
         handleKeyPress={handleKeyPress}
       ></Header>
-      <Main posts={posts} dark={dark}></Main>
+      <Main posts={posts} dark={dark} setPosts={setPosts} ></Main>
     </div>
   );
 }
