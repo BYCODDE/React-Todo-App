@@ -7,10 +7,16 @@ function App() {
 
   // const [input, setInput] = useState("");
 
+  const [color, setColor] = useState(true);
+
   const [posts, setPosts] = useState([]);
 
+  const handleButtonColor = function () {
+    setColor(!color);
+  };
+
   const handleKeyPress = (event) => {
-    if (event.key === "Enter" && event.target.value.trim() !=="") {
+    if (event.key === "Enter" && event.target.value.trim() !== "") {
       event.preventDefault();
       const content = event.target.value;
       setPosts([...posts, { content }]);
