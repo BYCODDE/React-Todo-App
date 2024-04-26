@@ -9,14 +9,10 @@ function App() {
 
   // const [color, setColor] = useState(true);
 
-  const [completed, setCompleted] = useState(true);
-
   const [posts, setPosts] = useState([]);
+  const [completed, setCompleted] = useState();
 
-  const handleComplete = function () {
-    setCompleted(!completed);
-    console.log(completed);
-  };
+  const handleComplete = function () {};
 
   // const handleButtonColor = function () {
   //   setColor(!color);
@@ -26,7 +22,9 @@ function App() {
     if (event.key === "Enter" && event.target.value.trim() !== "") {
       event.preventDefault();
       const content = event.target.value;
-      setPosts([...posts, { content }]);
+      const id = posts.length;
+      console.log(id);
+      setPosts([...posts, { content, id }]);
       event.target.value = "";
     }
   };

@@ -6,7 +6,7 @@ const Todo = ({ post, dark, handleComplete, completed }) => {
     <>
       {dark ? (
         <div className="text-[12px]   border-b border-background3 border-solid bg-background  shadow-lg tracking-tighter text-customColor4 font-normal leading-normal flex justify-between p-[20px]">
-          {completed ? (
+          {completed === post.length ? (
             <div
               onClick={handleComplete}
               className=" shadow-custom  h-[20px] w-[20px] rounded-[50%] bg-white cursor-pointer"
