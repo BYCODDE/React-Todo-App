@@ -5,7 +5,6 @@ import sun from "/images/icon-sun.svg";
 export default function Header({
   toggleDarkMode,
   dark,
-  // setInput,
   handleKeyPress,
 }) {
   return dark ? (
@@ -35,7 +34,6 @@ export default function Header({
         <div className="ml-[20px] shadow-custom  h-[25px] w-[30px] rounded-[50%] bg-white"></div>
         <input
           onKeyDown={handleKeyPress}
-          // onChange={(e) => setInput(e.target.value)}
           type="text"
           className="outline-none   w-[100%]   text-gray-600  text-[15px] font-normal leading-normal tracking-tighter"
           placeholder="Create a new todo…"
