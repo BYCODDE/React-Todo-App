@@ -11,13 +11,10 @@ const Todo = ({ post, dark, posts, setPosts }) => {
   };
 
   const handleComplete = () => {
-    // const completeIndex = posts.findIndex((item) => item.id === post.id);
-    // console.log(completeIndex);
-    // console.log(post.isDone);
     const parentDiv = event.target.parentNode;
     const childDiv = parentDiv.querySelector("div");
     const childP = parentDiv.querySelector("p");
-
+    //TODO: querySelectorAll unda gamoviyeno,rom yvelaze imushaos
     childDiv.style.background = "linear-gradient(to right, #55DDFF, #C058F3)";
     childP.style.textDecorationLine = "line-through";
     childP.style.fontWeight = "400";
