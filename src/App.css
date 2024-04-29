@@ -137,9 +137,8 @@ a {
   box-sizing: border-box;
 }
 
-body{
-  background: #f3f3f5 ;
-
+body {
+  background: #f3f3f5;
 }
 .dark {
   background: #171823 !important;
@@ -152,4 +151,9 @@ body{
 }
 .main_input {
   outline: none;
+}
+
+.custom-text-color {
+  color: #d1d2da !important;
+  opacity: 0.7 !important;
 }
