@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import img from "/images/icon-check.svg";
 
 import X from "/images/X.svg";
 const Todo = ({ post, dark, posts, setPosts }) => {
@@ -16,11 +17,7 @@ const Todo = ({ post, dark, posts, setPosts }) => {
     const parentDiv = event.target.parentNode;
     const childDiv = parentDiv.querySelector("div");
     const childP = parentDiv.querySelector("p");
-    console.log(childP);
-    childDiv.style.boxShadow = "none";
-    childDiv.style.height = "20px";
-    childDiv.style.width = "20px";
-    childDiv.style.borderRadius = "50%";
+
     childDiv.style.background = "linear-gradient(to right, #55DDFF, #C058F3)";
     childP.style.textDecorationLine = "line-through";
     childP.style.fontWeight = "400";
@@ -32,10 +29,14 @@ const Todo = ({ post, dark, posts, setPosts }) => {
       {dark ? (
         <div className="text-[12px]   border-b border-background3 border-solid bg-background  shadow-lg tracking-tighter text-customColor4 font-normal leading-normal flex justify-between p-[20px]">
           <div
+            className="relative  complete shadow-custom  h-[20px] w-[20px] rounded-[50%]  cursor-pointer  z-10"
             onClick={handleComplete}
-            className="complete shadow-custom  h-[20px] w-[20px] rounded-[50%]  cursor-pointer"
           >
-            
+            <img
+              className="absolute left-[20%] top-[25%]"
+              src={img}
+              alt="iconCheck"
+            />
           </div>
 
           {/* <div className=" shadow-none h-[20px] w-[20px] rounded-[50%] bg-gradient-to-r from-background4 to-background5"></div> */}
