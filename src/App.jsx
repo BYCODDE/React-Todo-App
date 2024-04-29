@@ -11,7 +11,10 @@ function App() {
     if (event.key === "Enter" && event.target.value.trim() !== "") {
       event.preventDefault();
       const content = event.target.value;
-      setPosts([...posts, { content, id: Math.random(), isDone: false }]);
+      setPosts([
+        ...posts,
+        { content, id: Math.random(), isDone: false, index: "1" },
+      ]);
       event.target.value = "";
     }
   };

@@ -10,11 +10,18 @@ const Todo = ({ post, dark, posts, setPosts }) => {
   };
 
   const handleComplete = () => {
-    const completeIndex = posts.findIndex((item) => item.id === post.id);
-    console.log(completeIndex);
+    // const completeIndex = posts.findIndex((item) => item.id === post.id);
+    // console.log(completeIndex);
+    // console.log(post.isDone);
+    const parentDiv = event.target.parentNode;
 
-    // posts.completeIndex.isDone = true;
-    // console.log(completeIndex.isDone);
+    const childDiv = parentDiv.querySelector("div");
+
+    childDiv.style.boxShadow = "none";
+    childDiv.style.height = "20px";
+    childDiv.style.width = "20px";
+    childDiv.style.borderRadius = "50%";
+    childDiv.style.background = "linear-gradient(to right, #55DDFF, #C058F3)";
   };
 
   return (
@@ -23,7 +30,7 @@ const Todo = ({ post, dark, posts, setPosts }) => {
         <div className="text-[12px]   border-b border-background3 border-solid bg-background  shadow-lg tracking-tighter text-customColor4 font-normal leading-normal flex justify-between p-[20px]">
           <div
             onClick={handleComplete}
-            className=" shadow-custom  h-[20px] w-[20px] rounded-[50%] bg-white cursor-pointer"
+            className="complete shadow-custom  h-[20px] w-[20px] rounded-[50%]  cursor-pointer"
           ></div>
 
           {/* <div className=" shadow-none h-[20px] w-[20px] rounded-[50%] bg-gradient-to-r from-background4 to-background5"></div> */}
