@@ -21,22 +21,23 @@ const Todo = ({ post, dark, posts, setPosts }) => {
   return (
     <>
       <div
-        className={`  ${
+        className={` ${
           dark
-            ? "border-background3  bg-background  "
-            : "border-customColor6 bg-customColor "
-        }  " p-[20px]
-        text-[12px]   border-solid border-b  shadow-lg tracking-tighter text-customColor4 font-normal leading-normal flex justify-between "`}
+            ? "border-background3 bg-background"
+            : "border-customColor6 bg-customColor"
+        } p-[20px] text-[12px] border-solid border-b shadow-lg tracking-tighter text-customColor4 font-normal leading-normal flex justify-between`}
       >
         <div
-          className="relative  complete shadow-custom  h-[20px] w-[20px] rounded-[50%]  cursor-pointer  z-10"
+          className={`${
+            dark ? "shadow-custom" : "shadow-custom opacity-30"
+          } relative complete h-[20px] w-[20px] rounded-[50%] cursor-pointer z-10`}
           onClick={handleComplete}
         >
-          {/* <img
+          <img
             className="absolute left-[20%] top-[25%]"
             src={img}
             alt="iconCheck"
-          /> */}
+          />
         </div>
 
         {/* <div className=" shadow-none h-[20px] w-[20px] rounded-[50%] bg-gradient-to-r from-background4 to-background5"></div> */}
