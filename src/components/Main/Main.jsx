@@ -1,7 +1,16 @@
 /* eslint-disable react/prop-types */
+import { useState } from "react";
 import Todo from "./Todo/Todo";
 
 export default function Main({ dark, posts, setPosts }) {
+  
+  const [clear, setClear] = useState(false);
+  const handleClear = () => {
+    setClear(!clear);
+    if(clear && post.isDone){
+      console.log('fsd');
+    }
+  };
   return (
     <main className="p-[40px] text-[12px] text-customColor3 font-normal">
       <div className="overflow-hidden rounded-md">
@@ -18,7 +27,7 @@ export default function Main({ dark, posts, setPosts }) {
         {dark ? (
           <div className="bg-background rounded-md shadow-lg tracking-tighter text-customColor4 font-normal leading-normal flex justify-between p-[20px]">
             <h3>{posts.length} items left</h3>
-            <h3 className="cursor-pointer hover:text-customColor3">
+            <h3 onClick={handleClear}   className="cursor-pointer hover:text-customColor3">
               Clear Completed
             </h3>
           </div>
