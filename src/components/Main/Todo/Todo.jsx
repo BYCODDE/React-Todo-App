@@ -15,7 +15,6 @@ const Todo = ({ post, dark, posts, setPosts }) => {
     const index = clone.findIndex((item) => item.id === post.id);
     clone[index].isDone = !clone[index].isDone;
     setPosts([...clone]);
-    console.log(post.isDone);
   };
 
   return (
@@ -51,7 +50,7 @@ const Todo = ({ post, dark, posts, setPosts }) => {
               ? "text-customColor8 opacity-40 line-through "
               : post.isDone
               ? "text-#D1D2DA opacity-40 line-through"
-              : dark && "text-customColor7"
+              : !dark && "text-customColor7"
           }   text-customColor3 text-[14px] font-normal leading-normal tracking-tighter`}
         >
           {post.content}
