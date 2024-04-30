@@ -13,7 +13,7 @@ function App() {
       const content = event.target.value;
       setPosts([
         ...posts,
-        { content, id: Math.random(), isDone: false, index: "1" },
+        { content, id: Math.random(), isDone: false},
       ]);
       event.target.value = "";
     }

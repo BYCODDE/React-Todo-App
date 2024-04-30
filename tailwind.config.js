@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  important:true,
+  important: true,
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
@@ -12,15 +12,16 @@ export default {
     },
     extend: {
       outline: {
-        custom: ['1px solid red '], 
+        custom: ["1px solid red "],
       },
       colors: {
         customColor: "#25273D",
         customColor2: "rgba(118, 121, 146, 1)",
         customColor3: "#494C6B",
         customColor4: "#9495A5",
-        customColor5: '#3A7CFD',
-        customColor6: '#393A4B',
+        customColor5: "#3A7CFD",
+        customColor6: "#393A4B",
+        customColor7: "#C8CBE7",
         background: "#FFF",
         background2: "#F3F3F5",
         background3: "#E3E4F1",
