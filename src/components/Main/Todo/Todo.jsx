@@ -34,7 +34,7 @@ const Todo = ({ post, dark, posts, setPosts }) => {
           onClick={handleComplete}
         >
           <img
-            className="absolute left-[20%] top-[25%]"
+            className={`${post.isDone ? "block ": "hidden" } absolute left-[20%] top-[25%]`}
             src={img}
             alt="iconCheck"
           />
