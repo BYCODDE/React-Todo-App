@@ -31,7 +31,8 @@ const Todo = ({ post, dark, posts, setPosts }) => {
           className={`${
             dark ? "shadow-custom" : "shadow-custom opacity-30"
           } relative complete h-[20px] w-[20px] rounded-[50%] cursor-pointer z-10  ${
-            post.isDone && "bg-gradient-to-r from-background4 to-background5 shadow-none opacity-100"
+            post.isDone &&
+            "bg-gradient-to-r from-background4 to-background5 shadow-none opacity-100"
           }`}
           onClick={handleComplete}
         >
@@ -44,9 +45,15 @@ const Todo = ({ post, dark, posts, setPosts }) => {
           )}
         </div>
 
-        {/* <div className=" shadow-none h-[20px] w-[20px] rounded-[50%] bg-gradient-to-r from-background4 to-background5"></div> */}
-
-        <p className="text-customColor3 text-[14px] font-normal leading-normal tracking-tighter">
+        <p
+          className={`${
+            dark && post.isDone
+              ? "text-customColor8 opacity-40 line-through"
+              : post.isDone
+              ? "text-#D1D2DA opacity-40 line-through"
+              : ""
+          } text-[14px] font-normal leading-normal tracking-tighter`}
+        >
           {post.content}
         </p>
         <img
