@@ -29,7 +29,7 @@ const Todo = ({ post, dark, posts, setPosts }) => {
       >
         <div
           className={`${
-            dark ? "shadow-custom" : "shadow-custom opacity-30"
+            dark ? "shadow-custom" : "shadow-customtwo "
           } relative complete h-[20px] w-[20px] rounded-[50%] cursor-pointer z-10  ${
             post.isDone &&
             "bg-gradient-to-r from-background4 to-background5 shadow-none opacity-100"
@@ -48,11 +48,11 @@ const Todo = ({ post, dark, posts, setPosts }) => {
         <p
           className={`${
             dark && post.isDone
-              ? "text-customColor8 opacity-40 line-through"
+              ? "text-customColor8 opacity-40 line-through "
               : post.isDone
               ? "text-#D1D2DA opacity-40 line-through"
-              : ""
-          } text-[14px] font-normal leading-normal tracking-tighter`}
+              : dark && "text-customColor7"
+          }   text-customColor3 text-[14px] font-normal leading-normal tracking-tighter`}
         >
           {post.content}
         </p>
