@@ -34,7 +34,7 @@ export default function Main({ dark, posts, setPosts }) {
   };
 
   return (
-    <main className="p-[40px] text-[12px] text-customColor3 font-normal">
+    <main  className="  p-[40px] text-[12px] text-customColor3 font-normal">
       <div className="overflow-hidden rounded-md">
         {posts
           .filter((item) => {
@@ -82,9 +82,7 @@ export default function Main({ dark, posts, setPosts }) {
             <span
               onClick={handleAll}
               className={`${
-                color && color2 !== true && color3 !== true
-                  ? "text-customColor5 "
-                  : null
+                color && "text-customColor5 "
               }  hover:text-customColor3 cursor-pointer`}
             >
               All
@@ -92,9 +90,7 @@ export default function Main({ dark, posts, setPosts }) {
             <span
               onClick={handleActive}
               className={`${
-                color2 && color !== true && color3 !== true
-                  ? "text-customColor5 "
-                  : null
+                color2 && "text-customColor5 "
               }  hover:text-customColor3 cursor-pointer`}
             >
               Active
