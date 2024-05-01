@@ -7,7 +7,6 @@ function App() {
 
   const [posts, setPosts] = useState([]);
 
-  
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter" && event.target.value.trim() !== "") {

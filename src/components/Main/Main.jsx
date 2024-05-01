@@ -4,41 +4,47 @@ import { useState } from "react";
 import Todo from "./Todo/Todo";
 
 export default function Main({ dark, posts, setPosts }) {
+  const [info, setInfo] = useState("all");
 
-  const [all,setAll] = useState(false)
-  const [active,setActive] = useState(false)
-  const [complete,setComplete] = useState(false)
   const handleClear = () => {
     const updatedPosts = posts.filter((post) => !post.isDone);
     setPosts(updatedPosts);
   };
 
   const handleAll = () => {
-    const updatedAll = posts.filter((post) => post);
-    setPosts(updatedAll);
+    setInfo("all");
+    
   };
   const handleActive = () => {
-    const updatedActive = posts.filter((post) => !post.isDone);
-    setPosts(updatedActive);
+    setInfo("active");
   };
 
   const handleComplete = () => {
-    const updateComplete = posts.filter((post) => post.isDone);
-    setPosts(updateComplete);
+    setInfo("complete");
   };
 
   return (
     <main className="p-[40px] text-[12px] text-customColor3 font-normal">
       <div className="overflow-hidden rounded-md">
-        {posts.map((post) => (
-          <Todo
-            setPosts={setPosts}
-            dark={dark}
-            key={Math.random() * Math.random()}
-            post={post}
-            posts={posts}
-          />
-        ))}
+        {posts
+          .filter((item) => {
+            if (info === "active") {
+              return item.isDone === false;
+            } else if (info === "complete") {
+              return item.isDone === true;
+            } else {
+              return item;
+            }
+          })
+          .map((post) => (
+            <Todo
+              setPosts={setPosts}
+              dark={dark}
+              key={Math.random() * Math.random()}
+              post={post}
+              posts={posts}
+            />
+          ))}
 
         {dark ? (
           <div className="bg-background rounded-md shadow-lg tracking-tighter text-customColor4 font-normal leading-normal flex justify-between p-[20px]">

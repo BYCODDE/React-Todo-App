@@ -67,7 +67,7 @@ export default function Header({
         <div className="ml-[20px] shadow-customColor2 h-[25px] w-[30px] rounded-[50%] bg-customColor "></div>
         <input
           onKeyDown={handleKeyPress}
-          // onChange={(e) => setInput(e.target.value)}
+          
           type="text"
           className=" outline-none   w-[100%]  bg-customColor text-customColor2  text-[15px] font-normal leading-normal tracking-tighter"
           placeholder="Create a new todo…"
