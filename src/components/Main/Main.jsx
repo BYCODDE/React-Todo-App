@@ -5,7 +5,9 @@ import Todo from "./Todo/Todo";
 
 export default function Main({ dark, posts, setPosts }) {
   const [info, setInfo] = useState("all");
-
+  const [color, setColor] = useState(false);
+  const [color2, setColor2] = useState(false);
+  const [color3, setColor3] = useState(false);
   const handleClear = () => {
     const updatedPosts = posts.filter((post) => !post.isDone);
     setPosts(updatedPosts);
@@ -13,14 +15,16 @@ export default function Main({ dark, posts, setPosts }) {
 
   const handleAll = () => {
     setInfo("all");
-    
+    setColor(!color);
   };
   const handleActive = () => {
     setInfo("active");
+    setColor2(!color2);
   };
 
   const handleComplete = () => {
     setInfo("complete");
+    setColor3(!color3);
   };
 
   return (
@@ -71,30 +75,54 @@ export default function Main({ dark, posts, setPosts }) {
           <div className="mt-[16px] font-bold text-[14px] bg-background rounded-md shadow-lg tracking-tighter text-customColor4 leading-normal flex justify-center p-[20px] gap-[19px]">
             <span
               onClick={handleAll}
-              className="hover:text-customColor3 cursor-pointer"
+              className={`${
+                color && "text-customColor5 "
+              }  hover:text-customColor3 cursor-pointer`}
             >
               All
             </span>
             <span
               onClick={handleActive}
-              className="hover:text-customColor3 cursor-pointer"
+              className={`${
+                color2 && "text-customColor5 "
+              }  hover:text-customColor3 cursor-pointer`}
             >
               Active
             </span>
             <span
               onClick={handleComplete}
-              className="hover:text-customColor3 cursor-pointer"
+              className={`${
+                color3 && "text-customColor5 "
+              }  hover:text-customColor3 cursor-pointer`}
             >
               Completed
             </span>
           </div>
         ) : (
           <div className="mt-[16px]  text-[14px] bg-customColor rounded-md shadow-lg tracking-tighter text-customColor2 leading-normal flex justify-center p-[20px] gap-[19px] font-bold">
-            <span className="hover:text-background3 cursor-pointer">All</span>
-            <span className="hover:text-background3 cursor-pointer">
+            <span
+              className={`${
+                color && "text-customColor5 "
+              }  hover:text-background3 cursor-pointer`}
+              onClick={handleAll}
+            >
+              All
+            </span>
+
+            <span
+              className={`${
+                color2 && "text-customColor5 "
+              }  hover:text-background3 cursor-pointer`}
+              onClick={handleActive}
+            >
               Active
             </span>
-            <span className="hover:text-background3 cursor-pointer">
+            <span
+              className={`${
+                color3 && "text-customColor5 "
+              }  hover:text-background3 cursor-pointer`}
+              onClick={handleComplete}
+            >
               Completed
             </span>
           </div>
