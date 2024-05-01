@@ -7,6 +7,8 @@ function App() {
 
   const [posts, setPosts] = useState([]);
 
+  
+
   const handleKeyPress = (event) => {
     if (event.key === "Enter" && event.target.value.trim() !== "") {
       event.preventDefault();
@@ -37,7 +39,7 @@ function App() {
         toggleDarkMode={toggleDarkMode}
         handleKeyPress={handleKeyPress}
       ></Header>
-      <Main posts={posts} dark={dark} setPosts={setPosts}></Main>
+      <Main   posts={posts} dark={dark} setPosts={setPosts}></Main>
     </div>
   );
 }

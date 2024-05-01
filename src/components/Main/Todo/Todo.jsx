@@ -11,7 +11,7 @@ const Todo = ({ post, dark, posts, setPosts }) => {
   };
 
   const handleComplete = () => {
-    const clone = posts;
+    const clone = [...posts];
     const index = clone.findIndex((item) => item.id === post.id);
     clone[index].isDone = !clone[index].isDone;
     setPosts([...clone]);
