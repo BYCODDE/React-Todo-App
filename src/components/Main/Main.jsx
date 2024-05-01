@@ -16,15 +16,21 @@ export default function Main({ dark, posts, setPosts }) {
   const handleAll = () => {
     setInfo("all");
     setColor(!color);
+    setColor2(false);
+    setColor3(false);
   };
   const handleActive = () => {
     setInfo("active");
     setColor2(!color2);
+    setColor(false);
+    setColor3(false);
   };
 
   const handleComplete = () => {
     setInfo("complete");
     setColor3(!color3);
+    setColor2(false);
+    setColor(false);
   };
 
   return (
@@ -76,7 +82,9 @@ export default function Main({ dark, posts, setPosts }) {
             <span
               onClick={handleAll}
               className={`${
-                color && "text-customColor5 "
+                color && color2 !== true && color3 !== true
+                  ? "text-customColor5 "
+                  : null
               }  hover:text-customColor3 cursor-pointer`}
             >
               All
@@ -84,7 +92,9 @@ export default function Main({ dark, posts, setPosts }) {
             <span
               onClick={handleActive}
               className={`${
-                color2 && "text-customColor5 "
+                color2 && color !== true && color3 !== true
+                  ? "text-customColor5 "
+                  : null
               }  hover:text-customColor3 cursor-pointer`}
             >
               Active
