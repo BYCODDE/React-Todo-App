@@ -34,7 +34,7 @@ export default function Main({ dark, posts, setPosts }) {
   };
 
   return (
-    <main  className="  p-[40px] text-[12px] text-customColor3 font-normal">
+    <main className="md:flex md:justify-center  p-[40px] text-[12px] text-customColor3 font-normal">
       <div className="overflow-hidden rounded-md">
         {posts
           .filter((item) => {
@@ -57,7 +57,7 @@ export default function Main({ dark, posts, setPosts }) {
           ))}
 
         {dark ? (
-          <div className="bg-background rounded-md shadow-lg tracking-tighter text-customColor4 font-normal leading-normal flex justify-between p-[20px]">
+          <div className=" md:min-w-[540px]    bg-background rounded-md shadow-lg tracking-tighter text-customColor4 font-normal leading-normal flex justify-between p-[20px]">
             <h3>{posts.length} items left</h3>
             <h3
               onClick={handleClear}
