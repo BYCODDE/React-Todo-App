@@ -5,8 +5,10 @@ import sun from "/images/icon-sun.svg";
 export default function Header({ toggleDarkMode, dark, handleKeyPress }) {
   return dark ? (
     <header
-      className=" md:flex md:justify-center md:items-center md:flex-col p-[40px] bg-cover bg-center bg-no-repeat w-full "
-      style={{ backgroundImage: "url('/images/bg-mobile-light.jpg')" }}
+      className=" md:bg-[url('/images/bg-desktop-light.jpg')]  md:flex md:justify-center md:items-center md:flex-col p-[40px] bg-cover bg-center bg-no-repeat w-full "
+      style={{
+        backgroundImage: "url('/images/bg-mobile-light.jpg')",
+      }}
     >
       <div className="md:gap-[375px] flex justify-between items-center">
         <img className="h-[25px]" src={headerSvg} alt="headerSvg" />
@@ -38,7 +40,7 @@ export default function Header({ toggleDarkMode, dark, handleKeyPress }) {
     </header>
   ) : (
     <header
-      className=" md:flex md:justify-center md:items-center md:flex-col p-[40px] bg-cover bg-center bg-no-repeat w-full "
+      className="md:bg-[url('/images/bg-desktop-dark.jpg')]    md:flex md:justify-center md:items-center md:flex-col p-[40px] bg-cover bg-center bg-no-repeat w-full "
       style={{ backgroundImage: "url('/images/bg-mobile-dark.jpg')" }}
     >
       <div className=" md:gap-[375px]  flex justify-between items-center">
