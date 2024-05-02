@@ -38,10 +38,10 @@ export default function Header({ toggleDarkMode, dark, handleKeyPress }) {
     </header>
   ) : (
     <header
-      className="  p-[40px] bg-cover bg-center bg-no-repeat w-full "
+      className=" md:flex md:justify-center md:items-center md:flex-col p-[40px] bg-cover bg-center bg-no-repeat w-full "
       style={{ backgroundImage: "url('/images/bg-mobile-dark.jpg')" }}
     >
-      <div className=" flex justify-between items-center">
+      <div className=" md:gap-[375px]  flex justify-between items-center">
         <img className="h-[25px]" src={headerSvg} alt="headerSvg" />
         {dark ? (
           <img
@@ -59,7 +59,7 @@ export default function Header({ toggleDarkMode, dark, handleKeyPress }) {
           />
         )}
       </div>
-      <div className="cursor-pointer mt-[40px] justify-start  rounded-lg bg-customColor  shadow-lg flex items-center gap-[20px] p-[20px]">
+      <div className=" md:w-[540px] cursor-pointer mt-[40px] justify-start  rounded-lg bg-customColor  shadow-lg flex items-center gap-[20px] p-[20px]">
         <div className="ml-[20px] shadow-customColor2 h-[25px] w-[30px] rounded-[50%] bg-customColor "></div>
         <input
           onKeyDown={handleKeyPress}

@@ -67,7 +67,7 @@ export default function Main({ dark, posts, setPosts }) {
             </h3>
           </div>
         ) : (
-          <div className="bg-customColor rounded-md shadow-lg text-customColor2 text-[12px] font-normal leading-normal tracking-tighter flex justify-between p-[20px]">
+          <div className="md:min-w-[540px]    bg-customColor rounded-md shadow-lg text-customColor2 text-[12px] font-normal leading-normal tracking-tighter flex justify-between p-[20px]">
             <h3>{posts.length} items left</h3>
             <h3
               onClick={handleClear}
